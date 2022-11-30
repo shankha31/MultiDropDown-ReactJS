@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/MultiDropDown-ReactJS/static/css/main.e33d2fec.chunk.css",
+    "main.js": "/MultiDropDown-ReactJS/static/js/main.d0f42584.chunk.js",
+    "main.js.map": "/MultiDropDown-ReactJS/static/js/main.d0f42584.chunk.js.map",
+    "runtime-main.js": "/MultiDropDown-ReactJS/static/js/runtime-main.5f46d08a.js",
+    "runtime-main.js.map": "/MultiDropDown-ReactJS/static/js/runtime-main.5f46d08a.js.map",
+    "static/js/2.01ee79b5.chunk.js": "/MultiDropDown-ReactJS/static/js/2.01ee79b5.chunk.js",
+    "static/js/2.01ee79b5.chunk.js.map": "/MultiDropDown-ReactJS/static/js/2.01ee79b5.chunk.js.map",
+    "index.html": "/MultiDropDown-ReactJS/index.html",
+    "static/css/main.e33d2fec.chunk.css.map": "/MultiDropDown-ReactJS/static/css/main.e33d2fec.chunk.css.map",
+    "static/js/2.01ee79b5.chunk.js.LICENSE.txt": "/MultiDropDown-ReactJS/static/js/2.01ee79b5.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.5f46d08a.js",
+    "static/js/2.01ee79b5.chunk.js",
+    "static/css/main.e33d2fec.chunk.css",
+    "static/js/main.d0f42584.chunk.js"
+  ]
+}
