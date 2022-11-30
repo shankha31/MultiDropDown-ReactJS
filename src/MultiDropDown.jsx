@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "./index.css";
 import Element from './Element';
 import { SelectedElement } from "./SelectedElement";
@@ -6,33 +6,28 @@ import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import CancelIcon from '@mui/icons-material/Cancel';
 
 function MultiDropDown({ options, preSelected }) {
-
+    
     const unSelectedItems = options.filter(function (unSelectedItems) {
         return !preSelected.find(function (preSelectedItem) {
             return unSelectedItems.value === preSelectedItem.value
         })
     })
-
     const [showDropdown, setShowDropdown] = useState(false);
     const [selectedElement, setSelectedElement] = useState(preSelected);
     const [unSelectedElement, setUnSelectedElement] = useState(unSelectedItems);
-
     const ref = useRef();
     const refInp = useRef();
-
     const handleDelete = (color, e) => {
         e.stopPropagation();
         const itm = selectedElement.find((item) => item.value === color);
         setUnSelectedElement(prevarr => [...prevarr, itm]);
         setSelectedElement(selectedElement.filter((item) => item.value !== color));
     }
-
     const DeleteAll = () => {
         selectedElement.map((selectedItem) => setUnSelectedElement((preval) => [...preval,selectedItem] )
         )
         setSelectedElement(() => []);
     }
- 
     const handleView = (color, e) => {
         e.stopPropagation();
         const itm = options.find((item) => item.value === color);
@@ -44,20 +39,23 @@ function MultiDropDown({ options, preSelected }) {
             ref.current.className = "element-box hidden";
             refInp.current.className = "input inpHover";
         }
+        else{
+            setShowDropdown(prevValue => !prevValue);
+        }
     }
-    const handleShowDropdown = (e) => {
-        e.stopPropagation();
-        setShowDropdown((prevValue) => !prevValue);
-        if (showDropdown) {
-            ref.current.className = "element-box";
-            refInp.current.className = "input clicked";
-        }
-        else {
-            ref.current.className = "element-box hidden";
-            refInp.current.className = "input inpHover";
-        }
+    const viewDropdown = () => {
+        ref.current.className = "element-box";
+        refInp.current.className = "input clicked";
     }
 
+    useEffect(()=>{
+        showDropdown ? viewDropdown() : hideDropdown();
+    },[showDropdown])
+
+    const handleShowDropdown = (e) => {
+        e.stopPropagation();
+        setShowDropdown(prevValue => !prevValue);
+    }
     return (
         <>
             <div className="parent" onClick={hideDropdown}>
@@ -103,5 +101,4 @@ function MultiDropDown({ options, preSelected }) {
         </>
     )
 }
-
 export default MultiDropDown;
