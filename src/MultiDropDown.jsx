@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "./index.css";
 import Element from './Element';
 import { SelectedElement } from "./SelectedElement";
