@@ -1,0 +1,139 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    font-family: Roboto,-apple-system,BlinkMacSystemFont,'Helvetica Neue',Helvetica,sans-serif;
+    font-style: normals;
+}
+.parent{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    
+}
+.structure{
+    margin-top: 10%;
+    width: 548px;
+}
+.input{
+    min-height:45px;
+    width: 548px;
+    border: 1.2px solid rgb(204, 204, 204);
+    border-radius: 5px;
+    display: flex;
+    position: relative;
+    overflow: scroll;
+}
+.selectedElementParent{
+    width: 500px;
+}
+.inpHover:hover{
+    border-color: rgba(131, 131, 131, 0.623);
+}
+.placeHolderInput{
+    -webkit-user-select: none; 
+    -ms-user-select: none;
+    user-select: none;
+    color: rgba(120, 118, 118, 0.761);
+    align-self: center;
+    padding-left: 10px;
+    position: absolute;
+    top: 12.5px;
+}
+.placeHolderMenuBox{
+    -webkit-user-select: none; 
+    -ms-user-select: none;
+    user-select: none;
+    color: rgba(120, 118, 118, 0.761);
+    text-align: center;
+    padding-top: 12px;
+}
+.element-box{
+    margin-top: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    display: block;
+    width: 548px;
+    min-height: 43px;
+    max-height: 305px;
+    border: 1px solid rgb(190, 190, 190);
+    border-radius: 4px;
+    overflow: scroll;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+.element{
+    font-size: medium;
+    height: 38px;
+    width: 548px;
+}
+.downArrow{
+    align-self: center;
+    position: absolute;
+    right: 0;
+    padding-top: 4px;
+    border-left: 1px solid rgb(204, 204, 204);
+    width: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.ElementVal{
+    padding-top: 10px;
+    padding-left: 10px;
+    -webkit-user-select: none; 
+    -ms-user-select: none;
+    user-select: none;
+}
+.hidden{
+    visibility: hidden;
+}
+.clicked{
+    border: 2px solid #2684ff;
+}
+.selectedElement{
+    height: 25px;
+    width: 78px;
+    margin: 8px;
+    border-radius: 2px;
+    font-size: small;
+    position: relative;
+    top: 2.5px;
+    display: inline-block;
+}
+.selectedElementText{
+    display: inline-block;
+    position: absolute;
+    top: 5px;
+    left: 9px;
+    -webkit-user-select: none; 
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.selectedElementDeleteBtn{
+    display: inline-block;
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    border-radius: 3px;
+
+}
+.deleteBtn{
+    all: unset;
+    font-size: small;
+}
+.crossIconParent{
+    align-self: center;
+    position: absolute;
+    right: 47px;
+    padding-top:2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.crossIcon, .downArrowIcon{
+    color: rgb(204, 204, 204);
+}
+.crossIcon:hover, .downArrowIcon:hover{
+    color: #434242;
+}
