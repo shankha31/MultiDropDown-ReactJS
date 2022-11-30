@@ -44,20 +44,23 @@ function MultiDropDown({ options, preSelected }) {
             ref.current.className = "element-box hidden";
             refInp.current.className = "input inpHover";
         }
+        else{
+            setShowDropdown(prevValue => !prevValue);
+        }
     }
-    const handleShowDropdown = (e) => {
-        e.stopPropagation();
-        setShowDropdown((prevValue) => !prevValue);
-        if (showDropdown) {
-            ref.current.className = "element-box";
-            refInp.current.className = "input clicked";
-        }
-        else {
-            ref.current.className = "element-box hidden";
-            refInp.current.className = "input inpHover";
-        }
+    const viewDropdown = () => {
+        ref.current.className = "element-box";
+        refInp.current.className = "input clicked";
     }
 
+    useEffect(()=>{
+        showDropdown ? viewDropdown() : hideDropdown();
+    },[showDropdown])
+
+    const handleShowDropdown = (e) => {
+        e.stopPropagation();
+        setShowDropdown(prevValue => !prevValue);
+    }
     return (
         <>
             <div className="parent" onClick={hideDropdown}>
