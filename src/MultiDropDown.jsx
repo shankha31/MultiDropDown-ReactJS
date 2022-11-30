@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useEffect, useRef, useState } from "react";
 import "./index.css";
 import Element from './Element';
 import { SelectedElement } from "./SelectedElement";
@@ -46,7 +46,19 @@ function MultiDropDown({ options, preSelected }) {
     const viewDropdown = () => {
         ref.current.className = "element-box";
         refInp.current.className = "input clicked";
+        else{
+            setShowDropdown(prevValue => !prevValue);
+        }
     }
+    const viewDropdown = () => {
+        ref.current.className = "element-box";
+        refInp.current.className = "input clicked";
+    }
+
+    useEffect(()=>{
+        showDropdown ? viewDropdown() : hideDropdown();
+    },[showDropdown])
+
 
     useEffect(()=>{
         showDropdown ? viewDropdown() : hideDropdown();
