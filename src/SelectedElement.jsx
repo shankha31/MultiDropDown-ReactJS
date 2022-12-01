@@ -33,7 +33,7 @@ export function SelectedElement({ label, handleDelete, value, clrCd, clrCdTxt })
                         type="delete"
                         onClick={(e) => handleDelete(value, e)}
                     >
-                        <ClearIcon fontSize="small" />
+                        <ClearIcon className="deleteBtnIcon" fontSize="small" />
                     </button>
                 </div>
             </div>
